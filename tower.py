@@ -28,20 +28,17 @@ while True:
         continue
 
     i = 0
-    while i < len(blocks):
+    while i < size:
         mc.setBlock(x, y + i, z, blocks[i])
         i += 1
     
-    if count >= len(blocks):
+    if count >= size:
         count = 0
         if back == 0:
             back = 1
         else:
             back = 0
             
-    # print("count" + str(count))
-    # print("back" + str(back))
-    
     if back == 0:
         del blocks[size - 1]
         blocks.insert(0, barBlock)
